@@ -9,7 +9,9 @@
 
             <div class="title">Grafika</div>
 
-            <div class="text">
+            <img class="g-img" src="screenshots/skalowanie_ss.png" alt="" title="">
+
+            <div class="g-text">
                 Wymagania dotyczące grafiki są następujące:
                 <ul>
                     <li>
@@ -26,24 +28,20 @@
                 </ul>
                 Obydwie grafiki należy otworzyć w programie 
                 do obróbki grafiki rastrowej, np. GIMP.
-            </div>
-
-            <img class="g-img" src="screenshots/skalowanie_ss.png" alt="" title="">
-
-            <div class="g-text">
                 Aby przeskalować grafikę należy zaznaczyć cały obrazek,
                 po czym wybrać narzędzie do skalowania.<br>
-                Po dostosowaniu wymiarów obrazka trzeba go skopiować, 
-                stworzyć nowy plik o wymiarach skopiowanego obrazka, 
-                najlepiej od razu z przezroczystym tłem.
-            </div>
-
-            <div class="g-text">
-                Następnie wklejamy obrazek z prawidłowymi rozmiarami
-                oraz eksportujemy z roszerzeniem <span>.png</span>.
+                
             </div>
 
             <img class="g-img" src="screenshots/eksport_ss.png" alt="" title="">
+
+            <div class="g-text">
+                Po dostosowaniu wymiarów obrazka trzeba go skopiować, 
+                stworzyć nowy plik o wymiarach skopiowanego obrazka, 
+                najlepiej od razu z przezroczystym tłem.
+                Następnie wklejamy obrazek z prawidłowymi rozmiarami
+                oraz eksportujemy z roszerzeniem <span>.png</span>.
+            </div>
 
             <div class="bigger">
                 Podgląd gotowej strony:
