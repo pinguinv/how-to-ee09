@@ -1,25 +1,52 @@
 <script setup>
 
-
-
-
 </script>
 
 <template>
 
     <div class="container">
         <div class="description">
+
+            <div class="title">Grafika</div>
+
             <div class="text">
-                Zazwyczaj arkusz zaczyna się od operacji na bazie danych.
+                Wymagania dotyczące grafiki są następujące:
+                <ul>
+                    <li>
+                        plik logo.png należy przeskalować z 
+                        zachowaniem proporcji tak, aby jego
+                        wysokość wynosiła dokładnie 90 px, 
+                        obraz ma zachować przezroczystość
+                    </li>
+                    <li>
+                        plik obraz.jpg należy przeskalować z 
+                        zachowaniem proporcji tak, aby jego
+                        wysokość wynosiła dokładnie 250 px
+                    </li>
+                </ul>
+                Obydwie grafiki należy otworzyć w programie 
+                do obróbki grafiki rastrowej, np. GIMP.
             </div>
 
-            <code>
-                cokolwiek <br>
-                
-            </code>
+            <img class="g-img" src="screenshots/skalowanie_ss.png" alt="" title="">
 
-            <div class="text">
-                Gotowa strona powinna wyglądać w ten sposób:
+            <div class="g-text">
+                Aby przeskalować grafikę należy zaznaczyć cały obrazek,
+                po czym wybrać narzędzie do skalowania.<br>
+                Po dostosowaniu wymiarów obrazka trzeba go skopiować, 
+                stworzyć nowy plik o wymiarach skopiowanego obrazka, 
+                najlepiej od razu z przezroczystym tłem.
+            </div>
+
+            <div class="g-text">
+                Następnie wklejamy obrazek z prawidłowymi rozmiarami
+                oraz eksportujemy z roszerzeniem <span>.png</span>.
+            </div>
+
+            <img class="g-img" src="screenshots/eksport_ss.png" alt="" title="">
+
+            <div class="bigger">
+                Podgląd gotowej strony:
             </div>
 
             <img src="screenshots/gotowiec.png" alt="podgląd gotowej strony" title="podgląd gotowej strony">
@@ -237,6 +264,219 @@
             
 
             <div class="title">CSS</div>
+                
+            <div class="text">
+                Teraz pora zająć się CSS-em.
+                Wymagania z arkusza zaraz, bo najpierw trzeba
+                poustawiać bloki, żeby to wyglądało tak jak powinno.<br>
+                Według mnie najlepiej do ustawiania div-ów służy flexbox.
+                Na początku trzeba ustawić <span>display: flex;</span> dla 
+                elementów w których znajdują się kolejne div-y. W cssie
+                selektor dla klasy to kropka i jej nazwa.
+            </div>
+
+            <code>
+                .banner, .second-part {<br>
+                <t1></t1>display: flex;<br>
+                <t1></t1>flex-wrap: wrap;<br>
+                }
+            </code>
+
+            <div class="text">
+                To wystarczy, żeby w podanych blokach divy ustawiały się obok 
+                siebie, jeśli będą miały do tego miejsce. <span>flex-wrap: wrap;</span>
+                jest w razie gdyby łączna szerokość div-ów przekroczyła 100%.<br>
+                Wymagania arkusza są następujące:
+                <ul>
+                    <li>domyślne dla całej strony: krój czcionki Garamond</li>
+                    <li>
+                        wspólne dla lewego i prawego bloku banera:
+                        <ul>
+                            <li>kolor tła RGB(95, 158, 160)</li>
+                            <li>żółty kolor czcionki</li>
+                            <li>szerokość 20%</li>
+                            <li>wysokość 90px</li>
+                            <li>wyrównywanie tekstu do prawej</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <code>
+                html {<br>
+                <t1></t1>font-family: Garamond;<br>
+                }<br><br>
+
+                .left, .right {<br>
+                <t1></t1>background-color: rgb(95, 158, 160);<br>
+                <t1></t1>color: yellow;<br>
+                <t1></t1>width: 20%;<br>
+                <t1></t1>height: 90px;<br>
+                <t1></t1>text-align: right;<br>
+                }
+            </code>
+
+            <div class="text">
+                Dla środkowego bloku banera:
+                <ul>
+                    <li>kolor tła RGB(175, 238, 238)</li>
+                    <li>żółty kolor czcionki</li>
+                    <li>szerokość 60%</li>
+                    <li>wysokość 90px</li>
+                    <li>wyrównywanie tekstu do środka</li>
+                </ul>
+            </div>
+
+            <code>
+                .middle {<br>
+                <t1></t1>background-color: rgb(175, 238, 238);<br>
+                <t1></t1>color: yellow;<br>
+                <t1></t1>width: 20%;<br>
+                <t1></t1>height: 90px;<br>
+                <t1></t1>text-align: center;<br>
+                }
+            </code>
+
+            <div class="text">
+                Dla bloku lewego i prawego:
+                <ul>
+                    <li>kolor tła RGB(175, 238, 238)</li>
+                    <li>szerokość 50%</li>
+                    <li>wysokość 250px</li>
+                </ul>
+                Dla bloku głównego:
+                <ul>
+                    <li>kolor tła RGB(95, 158, 160)</li>
+                    <li>marginesy wewnętrzne 30px</li>
+                </ul>
+                Dla bloku stopki:
+                <ul>
+                    <li>kolor tła RGB(175, 238, 238)</li>
+                    <li>marginesy wewnętrzne 10px</li>
+                </ul>
+            </div>
+
+            <code>
+                .half {<br>
+                <t1></t1>background-color: rgb(175, 238, 238);<br>
+                <t1></t1>width: 50%;<br>
+                <t1></t1>height: 250px;<br>
+                }<br><br>
+
+                .main {<br>
+                <t1></t1>background-color: rgb(95, 158, 160);<br>
+                <t1></t1>padding: 30px;<br>
+                }<br><br>
+
+                .footer {<br>
+                <t1></t1>background-color: rgb(175, 238, 238);<br>
+                <t1></t1>padding: 10px;<br>
+                }
+
+            </code>
+
+            <div class="text">
+                Dla znacznika tabeli:
+                <ul>
+                    <li>obramowanie 2px, linią kropkowaną o zielonym kolorze</li>
+                    <li>szerokość 100%</li>
+                    <li>obramowanie połączone</li>
+                </ul>
+                Dla znacznika komórki danych oraz komórki nagłówkowej tabeli:
+                <ul>
+                    <li>obramowanie 2px, linią kropkowaną o zielonym kolorze</li>
+                </ul>
+                Dodatkowo dla komórki nagłówkowej kolor tła zielony 
+                i kolor czcionki żółty.
+            </div>
+
+            <code>
+                table{<br>
+                <t1></t1>border: 2px dotted green;<br>
+                <t1></t1>width: 100%;<br>
+                <t1></t1>border-collapse: collapse;<br>
+                }<br><br>
+
+                td, th{<br>
+                <t1></t1>border: 2px dotted green;<br>
+                }<br><br>
+
+                th{<br>
+                <t1></t1>background-color: green;<br>
+                <t1></t1>color: yellow;<br>
+                }
+            </code>
+
+            <div class="title">PHP</div>
+
+            <div class="text">
+                Wymagania dotyczące skryptu:
+                <ul>
+                    <li>
+                        łączy się z serwerem na localhost, 
+                        użytkownik root, bez hasła, baza o nazwie prognoza
+                    </li>
+                    <li>wysyła do bazy danych zapytanie 1</li>
+                </ul>
+                Z bazą łączymy się za pomocą funkcji podanej w tabeli,
+                funkcja zwraca id połączenia, które przechowywać będziemy
+                w zmiennej <span>$con</span>. Zapytanie zapiszemy w zmiennej
+                <span>$query</span>, a rezultat tego zapytania w <span>$result</span>.
+            </div>
+
+            <code>
+                &lt;?php<br><br>
+                
+                $con = mysqli_connect('localhost','root','root','prognoza');<br>
+                $query = "SELECT * FROM pogoda WHERE pogoda.miasta_id = 2 ORDER BY pogoda.data_prognozy DESC;";<br>
+                $result = mysqli_query($con, $query);
+            </code>
+
+            <div class="text">
+                <ul>
+                    <li>
+                        W pierwszej kolumnie tabeli wyświetlana jest liczba porządkowa 
+                        rozpoczynająca się w pierwszym wierszu z danymi od wartości 1.
+                        W pozostałych kolumnach tabeli wyświetlane są dane z bazy.
+                    </li>
+                </ul>
+                Dla liczby porządkowej musimy stworzyć zmienną, 
+                która będzie się zwiększała o 1 dla każdego kolejnego wiersza.
+                W php do wypisywania wielu wierszy danych
+                wykorzystuje się pętle <span>while</span>, która wykonuje się dopóki
+                warunek jest spełniony. <br>
+                W tym przypadku warunkiem jest zwrócenie wyniku zapytania do bazy
+                (pętla będzie wykonywać się tak długo, jak długo zwracane będą 
+                kolejne wiersze danych). Jeśli warunek jest spełniony,
+                to do zmiennej <span>$row</span> przypisywana jest kolejna linijka wyniku.<br>
+                Wewnątrz pętli tworzymy (wypisujemy) komórki tabeli wypełnione
+                danymi z zapytania za pomocą metody <span>echo</span>.
+                Do poszczególnych wartości dostajemy się przez notację tablicową
+                <span>$row['nazwa_komórki_w_bazie']</span>.
+            </div>
+
+            <code>
+                $i = 1;<br>
+                while(($row = mysqli_fetch_array($result)) != null){<br>
+                <t1></t1>echo("&lt;tr&gt;");<br>
+                <t1></t1>echo("&lt;td&gt;" . $i++ . "&lt;/td&gt;");<br>
+                <t1></t1>echo("&lt;td&gt;" . $row['data_prognozy'] . "&lt;/td&gt;&lt;td&gt;" <br>
+                <t1></t1>. $row['temperatura_noc'] . "&lt;/td&gt;&lt;td&gt;" <br>
+                <t1></t1>. $row['temperatura_dzien'] . "&lt;/td&gt;&lt;td&gt;" <br>
+                <t1></t1>. $row['opady'] . "&lt;/td&gt;&lt;td&gt;" <br>
+                <t1></t1>. $row['cisnienie'] . "&lt;/td&gt;" );<br>
+                <t1></t1>echo("&lt;/tr&gt;");<br>
+                }
+            </code>
+
+            <div class="text">
+                Na końcu działania skrypt zamyka połączenie z serwerem.
+            </div>
+
+            <code>
+                mysqli_close($con);<br>
+                ?&gt;
+            </code>
 
         </div>
         <div class="links">
@@ -259,7 +499,7 @@
 
     .container{
         width: 100%;
-        height: 120%;
+        height: 100%;
         overflow: hidden;
         background-color: #2c3e50;
         justify-content: center;
@@ -269,7 +509,7 @@
     .links{
         height: 100%;
         padding: 20px;
-        flex-direction: column;
+        flex-wrap: wrap;
     }
 
     .description{
@@ -289,12 +529,24 @@
         height: fit-content;
     }
 
+    .g-text{
+        padding: 8px 16px;
+        width: 65%;
+        height: fit-content;
+        display: unset;
+    }
+
     .text{
         display: unset;
     }
 
+    .bigger{
+        font-size: 1.7rem;
+        width: 100%;
+        justify-content: center;
+    }
+
     code{
-        /* display: flex; */
         background-color: hsl(210, 29%, 18%);
         font-family: monospace;
     }
@@ -323,10 +575,16 @@
         margin: 8px 0;
     }
 
+    img.g-img{
+        width: 35%;
+        margin: 8px 0;
+    }
+
     .links{
         width: 25%;
         border-left: 5px solid #45607d;
-        /* flex-direction: column; */
+        flex-direction: column;
+        flex-wrap: unset;
     }
 
     .links-header{
