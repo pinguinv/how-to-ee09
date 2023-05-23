@@ -1,7 +1,5 @@
 <script setup>
 
-
-
 </script>
 
 <template>
@@ -21,7 +19,6 @@
         </div>
         
     </div>
-
 
 </template>
 
@@ -69,7 +66,5 @@
     .error-smol{
         text-align: center;
     }
-
-
 
 </style>

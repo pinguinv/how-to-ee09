@@ -7,9 +7,97 @@
     <div class="container">
         <div class="description">
 
+            <div class="title">Operacje na BD</div>
+
+            <div class="g-text">
+                Wymagania arkusza dotyczące bazy danych:
+                <ul>
+                    <li>utwórz bazę danych o nazwie <span>prognoza</span></li>
+                    <li>
+                        do stworzonej bazy należy zaimportować 
+                        tabele z pliku <span>baza2.sql</span>
+                    </li>
+                    <li>
+                        po imporcie robimy zrzut całego widocznego ekranu,
+                        łącznie z paskiem zadań
+                        (klawisze: windows + shift + s )
+                    </li>
+                </ul>
+
+            </div>
+
+            <img class="g-img" src="screenshots/import_ss.png" alt="import_ss" title="import_ss">
+
+            <div class="text">
+                Następnie tworzymy zapytania w <span>SQL</span> 
+                i zapisujemy je w pliku <span>kwerendy.txt</span>.<br>
+                Tutaj nie da się nic poradzić, trzeba po prostu znać SQL-a.
+                <ul>
+                    <li>
+                        Zapytanie 1:<br>
+                        wybierające wszystkie pola z tabeli pogoda dla miast 
+                        o id równym 2, posortowane malejąco według daty prognozy
+                    </li>
+                </ul>
+            </div>
+
+            <code>
+                SELECT * FROM pogoda WHERE pogoda.miasta_id = 2 ORDER BY pogoda.data_prognozy DESC;
+            </code>
+
+            <div class="text">
+                <ul>
+                    <li>
+                        Zapytanie 2:<br>
+                        wybierające jedynie pola id oraz temperatura_dzien z 
+                        tabeli pogoda dla tych rekordów, dla których ciśnienie 
+                        jest poniżej 1000 hPa
+                    </li>
+                </ul>
+            </div>
+
+            <code>
+                SELECT pogoda.id, pogoda.temperatura_dzien FROM pogoda WHERE pogoda.cisnienie &lt; 1000;
+            </code>
+
+            <div class="text">
+                <ul>
+                    <li>
+                        Zapytanie 3:<br>
+                        wybierające jedynie pola data_prognozy, opady 
+                        z tabeli pogoda oraz nazwa z tabeli
+                        miasta dla temperatur dziennych powyżej 20 stopni. 
+                        Zapytanie wykorzystuje relację
+                    </li>
+                </ul>
+            </div>
+
+            <code>
+                SELECT pogoda.data_prognozy, pogoda.opady, miasta.nazwa FROM pogoda JOIN miasta ON pogoda.miasta_id = miasta.id WHERE pogoda.temperatura_dzien > 20;
+            </code>
+
+            <div class="text">
+                <ul>
+                    <li>
+                        Zapytanie 4:<br>
+                        usuwające z tabeli pogoda rekord o id równym 8
+                    </li>
+                </ul>
+            </div>
+
+            <code>
+                DELETE FROM pogoda WHERE pogoda.id = 8;
+            </code>
+
+            <div class="text">
+                Po wykonaniu każdego zapytania trzeba zrobić zrzut całego ekranu
+                z widocznym wynikiem zapytania oraz zapisać w sposób następujący:<br>
+                <span>kw(numer_zapytania).jpg</span>, np.: <span>kw2.jgp</span>
+            </div>
+
             <div class="title">Grafika</div>
 
-            <img class="g-img" src="screenshots/skalowanie_ss.png" alt="" title="">
+            <img class="g-img" src="screenshots/skalowanie_ss.png" alt="skalowanie_ss" title="skalowanie_ss">
 
             <div class="g-text">
                 Wymagania dotyczące grafiki są następujące:
@@ -33,7 +121,7 @@
                 
             </div>
 
-            <img class="g-img" src="screenshots/eksport_ss.png" alt="" title="">
+            <img class="g-img" src="screenshots/eksport_ss.png" alt="eksport_ss" title="eksport_ss">
 
             <div class="g-text">
                 Po dostosowaniu wymiarów obrazka trzeba go skopiować, 

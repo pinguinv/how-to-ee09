@@ -1,7 +1,5 @@
 <script setup>
 
-
-
 </script>
 
 <template>
@@ -9,7 +7,7 @@
     <div class="container">
         <div class="half">
             <div class="description">
-                <p>Nazywam się Michał Mrózek, mam loczki, lubię góralki i jestem uczniem technikum o profilu <span>technik programista</span>.</p>
+                <p>Nazywam się Michał, mam loczki, lubię góralki i jestem uczniem technikum o profilu <span>technik programista</span>.</p>
                 <p>Ten projekt poświęcony jest egzaminowi zawodowemu.</p>
                 <p>Stworzonko po prawej to właśnie góralek.</p>
                 <p>(jest blisko spokrewniony ze słoniami)</p>
@@ -20,14 +18,11 @@
         <div class="half">
             <div class="goralek-container">
                 <div class="goralek-foto">
-                    <img src="/goralek.png" alt="góralek" title="góraliek :>">
+                    <img src="/goralek1.png" alt="góralek" title="góraliek :>">
                 </div>
             </div>
         </div>
-        
-        
     </div>
-
 
 </template>
 
@@ -61,6 +56,7 @@
         margin-top: 10%;
         width: 80%;
         flex-direction: column;
+        font-size: 25px;
     }
 
     .description > p{
@@ -80,16 +76,18 @@
     }
 
     .goralek-foto{
+        height: 400px;
+        width: 400px;
+        border-radius: 200px;
+        justify-content: center;
+        align-items: center;
         border: #45607d 5px solid;
-        border-radius: 125px;
+        border-radius: 200px;
         overflow: hidden;
     }
 
     .goralek-foto > img{
         width: 100%;
-        max-width: 250px;
-        max-height: 250px;
     }
-
 
 </style>
