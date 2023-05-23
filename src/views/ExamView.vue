@@ -26,7 +26,7 @@
 
             </div>
 
-            <img class="g-img" src="screenshots/import_ss.png" alt="import_ss" title="import_ss">
+            <img class="g-img" src="/screenshots/import_ss.png" alt="import_ss" title="import_ss">
 
             <div class="text">
                 Następnie tworzymy zapytania w <span>SQL</span> 
@@ -97,7 +97,7 @@
 
             <div class="title">Grafika</div>
 
-            <img class="g-img" src="screenshots/skalowanie_ss.png" alt="skalowanie_ss" title="skalowanie_ss">
+            <img class="g-img" src="/screenshots/skalowanie_ss.png" alt="skalowanie_ss" title="skalowanie_ss">
 
             <div class="g-text">
                 Wymagania dotyczące grafiki są następujące:
@@ -121,7 +121,7 @@
                 
             </div>
 
-            <img class="g-img" src="screenshots/eksport_ss.png" alt="eksport_ss" title="eksport_ss">
+            <img class="g-img" src="/screenshots/eksport_ss.png" alt="eksport_ss" title="eksport_ss">
 
             <div class="g-text">
                 Po dostosowaniu wymiarów obrazka trzeba go skopiować, 
@@ -135,7 +135,7 @@
                 Podgląd gotowej strony:
             </div>
 
-            <img src="screenshots/gotowiec.png" alt="podgląd gotowej strony" title="podgląd gotowej strony">
+            <img src="/screenshots/gotowiec.png" alt="podgląd gotowej strony" title="podgląd gotowej strony">
 
             <div class="title">HTML</div>
 
