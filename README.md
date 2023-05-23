@@ -27,3 +27,17 @@ npm run dev
 ```sh
 npm run build
 ```
+
+### npm run build creates a dist directory with a production build of your app.
+### In order to serve index.html in a browser you need an HTTP server. For example serve:
+
+```sh
+npm install -g serve
+serve -s dist
+```
+
+### The default port is 5000, but can be adjusted using the -l or --listen flags:
+
+```sh
+serve -s build -l 4000
+```
