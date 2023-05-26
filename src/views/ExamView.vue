@@ -136,7 +136,12 @@
             </div>
 
             <img src="/screenshots/gotowiec.png" alt="podgląd gotowej strony" title="podgląd gotowej strony">
-
+            
+            <div class="text">
+                Nawiasem jeszczę wspomnę, że środowisko, którego 
+                użyłem do zrobienia egzaminu jest Visual Studio Code.
+            </div>
+            
             <div class="title">HTML</div>
 
             <div class="text">
