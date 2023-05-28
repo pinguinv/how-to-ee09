@@ -139,7 +139,7 @@
             
             <div class="text">
                 Nawiasem jeszczę wspomnę, że środowisko, którego 
-                użyłem do zrobienia egzaminu jest Visual Studio Code.
+                użyłem do zrobienia egzaminu to Visual Studio Code.
             </div>
             
             <div class="title">HTML</div>
