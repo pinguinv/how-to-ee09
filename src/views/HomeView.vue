@@ -1,29 +1,3 @@
-<script setup>
-import { ref } from 'vue';
-
-const i = ref(0);
-const goralki_arr = ['/goralek1.png', '/goralek2.png', '/goralek3.png', '/goralek4.png'];
-const goralki_title = ['góralek 1', 'góralek 2', 'góralek 3', 'góralek 4'];
-
-const next = () =>{
-    i.value += 1;
-    if(i.value > 3){
-        i.value = 0;
-    }
-}
-
-const goralekReturner = (nr) => {
-    // console.log("next");
-    let nr_goralka = i.value + nr;
-    if(nr_goralka > 3){
-        nr_goralka -= 4;
-    }
-
-    return goralki_arr[nr_goralka];
-}
-
-</script>
-
 <template>
 
     <div class="container">
@@ -34,13 +8,13 @@ const goralekReturner = (nr) => {
                 pomocy przy rozwiązywaniu egzaminu zawodowego... 
                 Egzamin znajdziesz w zakładce zatytułowanej "Egzamin" 
                 (któżby się spodziewał, prawda?), lecz póki co możesz
-                poklikać sobie w słodkie zwierzątka jakimi są góralki. 
+                pooglądać sobie słodkie zwierzątka jakimi są góralki. 
             </div>
 
             <div class="goralek-main">
                 <div class="goralek-container">
-                    <div class="goralek-foto-main" @click="next">
-                        <img :src="goralekReturner(0)" :alt="goralki_title[i]" title="kliknij, aby przewinąć">
+                    <div class="goralek-foto-main">
+                        <img src="/goralek3.png" alt="góralek">
                     </div>
                 </div>
             </div>
@@ -50,21 +24,21 @@ const goralekReturner = (nr) => {
             <div class="uno-goralek">
                 <div class="goralek-container">
                     <div class="goralek-foto">
-                        <img :src="goralekReturner(1)" :alt="goralki_title[i+1]" :title="goralki_title[i+1]">
+                        <img src="/goralek4.png" alt="góralek">
                     </div>
                 </div>
             </div>
             <div class="uno-goralek">
                 <div class="goralek-container">
                     <div class="goralek-foto">
-                        <img :src="goralekReturner(2)" :alt="goralki_title[i]" :title="goralki_title[i]">
+                        <img src="/goralek1.png" alt="góralek">
                     </div>
                 </div>
             </div>
             <div class="uno-goralek">
                 <div class="goralek-container">
                     <div class="goralek-foto">
-                        <img :src="goralekReturner(3)" :alt="goralki_title[i]" :title="goralki_title[i]">
+                        <img src="/goralek2.png" alt="góralek">
                     </div>
                 </div>
             </div>
@@ -112,10 +86,6 @@ const goralekReturner = (nr) => {
     .goralek-main{
         width: 50%;
         min-height: 450px;
-    }
-
-    .goralek-main img:hover{
-        cursor: pointer;
     }
 
     .goralek-foto-main{

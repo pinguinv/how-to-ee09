@@ -1,7 +1,3 @@
-<script setup>
-
-</script>
-
 <template>
 
     <div class="container">
@@ -70,7 +66,7 @@
 
     .goralek-container{
         width: 100%;
-        height: 400px;
+        /* height: 400px; */
         justify-content: center;
         align-items: center;
     }
@@ -84,10 +80,6 @@
         border: #45607d 5px solid;
         border-radius: 200px;
         overflow: hidden;
-    }
-
-    .goralek-foto > img{
-        width: 100%;
     }
 
 </style>
